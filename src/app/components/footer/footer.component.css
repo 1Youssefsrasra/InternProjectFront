@@ -1,0 +1,141 @@
+.footer {
+  background-color: #C5D7FF;
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 20px;
+}
+.logo {
+  margin-top: -65px;
+  max-width: 250px;
+}
+
+
+.footer-section h3 {
+  color: black;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-section p, .footer-section a {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-section a {
+  position: relative;
+  transition: color 0.3s;
+}
+
+.footer-section a:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #95B1E8;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-section a:hover {
+  color: #95B1E8;
+}
+
+.footer-section a:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: black;
+}
+
+.footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer .footer-section p i {
+  margin-right: 10px;
+  color: black;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contact-item i {
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+.contact-item a, .contact-item span {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1em;
+  display: inline-block;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media .social-icon {
+  color: black;
+  font-size: 1.5em;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-media .social-icon:hover {
+  color: #95B1E8;
+}
+.footer-section.contact {
+  /* Ensures there is space for the social media section */
+  margin-bottom: 40px;
+}
+
+.footer-section.contact .social-media {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  margin-top: 20px; /* Add some space above the icons */
+}
+
+.footer-section.contact .social-media .social-icon {
+  color: black; /* Default icon color */
+  font-size: 1.5em; /* Size of the icons */
+  margin: 0 15px; /* Spacing between icons */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale on hover */
+}
+
+.footer-section.contact .social-media .social-icon:hover {
+  color: #95B1E8; /* Hover color */
+  transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
