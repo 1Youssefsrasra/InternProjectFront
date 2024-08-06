@@ -9,26 +9,49 @@
   <style>
     body {
       font-family: 'DM Sans', sans-serif;
-      overflow: hidden; /* Empêche le défilement */
     }
-    .fixed-height {
-      height: calc(100vh - 2rem); /* Ajuste la hauteur en fonction des marges et du padding */
+    .stat-number {
+      font-size: 2rem; /* Taille du chiffre clé */
+      line-height: 1;  /* Alignement vertical */
+    }
+    .health-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%; /* Prendre toute la hauteur de la case */
+    }
+    .health-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .health-item-right {
+      display: flex;
+      align-items: center;
+      height: 100%; 
+      padding-left: 1rem; 
+    }
+
+    .health-item-icon {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
     }
   </style>
 </head>
 
 <body class="bg-white h-screen">
 
-  <div class="h-screen flex">
+  <div class="h-full flex">
     <!-- Sidebar Component -->
-    <app-sidebar class="w-1/4 bg-white p-4 fixed-height"></app-sidebar>
+    <app-sidebar class="w-1/4 bg-white p-4"></app-sidebar>
 
-    <div class="flex-1 p-4 fixed-height overflow-hidden">
+    <div class="flex-1 p-4">
       <header class="text-center p-4 bg-white">
         <h1 class="text-3xl">Welcome on MicroScan, John!</h1>
       </header>
       
-      <section class="bg-white p-8 flex flex-col h-full overflow-hidden">
+      <section class="bg-white p-8 flex flex-col h-full">
         <div class="flex items-center justify-between mb-8">
           <div class="text-center flex-1">
             <h2 class="text-4xl font-bold mb-2">Analysis is ready</h2>
@@ -61,7 +84,7 @@
         <hr>
         <div class="flex items-center justify-between mt-8 flex-1">
           <div class="flex-1">
-            <h2 class="text-xl font-bold mb-4">29 Juli</h2>
+            <h2 class="text-xl font-bold mb-4">29 July</h2>
             <ul class="space-y-2">
               <li class="flex items-center">
                 <span class="bg-blue-500 text-white rounded-full h-6 w-6 flex items-center justify-center mr-4">✔</span>
@@ -69,11 +92,11 @@
               </li>
               <li class="flex items-center">
                 <span class="bg-blue-500 text-white rounded-full h-6 w-6 flex items-center justify-center mr-4">✔</span>
-                Analysis launched: 22 Juli
+                Analysis launched: 22 July
               </li>
               <li class="flex items-center">
                 <span class="bg-blue-500 text-white rounded-full h-6 w-6 flex items-center justify-center mr-4">✔</span>
-                Laboratory meeting: 20 Juli
+                Laboratory meeting: 20 July
               </li>
             </ul>
             <div class="text-right mt-4">
@@ -85,8 +108,95 @@
             <img src="../../../assets/Images/DNA2.png" alt="DNA2 image" class="w-1/3 mx-auto">
           </div>
         </div>
+        <hr>
+        <div class="mt-8 flex-1">
+          <h2 class="text-2xl font-bold mb-4">Health Dashboard</h2>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 bg-gray-100 rounded-lg flex health-item">
+              <img src="../../../assets/icons/age.png" alt="Biological Age Icon" class="health-item-icon">
+              <div class="health-content">
+                <div>
+                  <h3 class="text-xl font-bold">Biological Age</h3>
+                  <p class="text-gray-600">Your biological age is</p>
+                </div>
+              </div>
+              <div class="stat-number health-item-right">30</div>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg flex health-item">
+              <img src="../../../assets/icons/intestin.png" alt="Gut Health Icon" class="health-item-icon">
+              <div class="health-content">
+                <div>
+                  <h3 class="text-xl font-bold">Gut Health</h3>
+                  <p class="text-gray-600">Your gut health score is</p>
+                </div>
+              </div>
+              <div class="stat-number health-item-right">85%</div>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg flex health-item">
+              <img src="../../../assets/icons/bouche.png" alt="Oral Health Icon" class="health-item-icon">
+              <div class="health-content">
+                <div>
+                  <h3 class="text-xl font-bold">Oral Health</h3>
+                  <p class="text-gray-600">Your oral health score is</p>
+                </div>
+              </div>
+              <div class="stat-number health-item-right">90%</div>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg flex health-item">
+              <img src="../../../assets/icons/cellules.png" alt="Cellular & Energy Efficiency Icon" class="health-item-icon">
+              <div class="health-content">
+                <div>
+                  <h3 class="text-xl font-bold">Cellular & Energy Efficiency</h3>
+                  <p class="text-gray-600">Your cellular efficiency is</p>
+                </div>
+              </div>
+              <div class="stat-number health-item-right">78%</div>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg flex health-item">
+              <img src="../../../assets/icons/inflammatory.png" alt="Inflammation Response Icon" class="health-item-icon">
+              <div class="health-content">
+                <div>
+                  <h3 class="text-xl font-bold">Inflammation Response</h3>
+                  <p class="text-gray-600">Your inflammation response is</p>
+                </div>
+              </div>
+              <div class="stat-number health-item-right">65%</div>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg flex health-item">
+              <img src="../../../assets/icons/brain.png" alt="Brain & Cognitive Health Icon" class="health-item-icon">
+              <div class="health-content">
+                <div>
+                  <h3 class="text-xl font-bold">Brain & Cognitive Health</h3>
+                  <p class="text-gray-600">Your cognitive health score is</p>
+                </div>
+              </div>
+              <div class="stat-number health-item-right">88%</div>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg flex health-item">
+              <img src="../../../assets/icons/immune.png" alt="Immune System Health Icon" class="health-item-icon">
+              <div class="health-content">
+                <div>
+                  <h3 class="text-xl font-bold">Immune System Health</h3>
+                  <p class="text-gray-600">Your immune health score is</p>
+                </div>
+              </div>
+              <div class="stat-number health-item-right">92%</div>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg flex health-item">
+              <img src="../../../assets/icons/heart.png" alt="Heart & Metabolic Health Icon" class="health-item-icon">
+              <div class="health-content">
+                <div>
+                  <h3 class="text-xl font-bold">Heart & Metabolic Health</h3>
+                  <p class="text-gray-600">Your heart health score is</p>
+                </div>
+              </div>
+              <div class="stat-number health-item-right">80%</div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
+
 </body>
 </html>
