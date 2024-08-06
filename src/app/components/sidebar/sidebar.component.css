@@ -1,0 +1,21 @@
+.text-custom-blue {
+  color: #273240;
+}
+
+.text-highlighted {
+  color:black;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;     /* Centers content vertically */
+  padding: 0.5rem;         /* Adjust padding as needed */
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
+
