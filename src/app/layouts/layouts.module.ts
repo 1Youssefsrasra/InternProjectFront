@@ -5,6 +5,7 @@ import { ResearcherComponent } from './researcher/researcher.component';
 import { LabComponent } from './lab/lab.component';
 import { LoginComponent } from './login/login.component';
 import { ComponentsModule } from '../components/components.module';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ComponentsModule } from '../components/components.module';
     PatientComponent,
     ResearcherComponent,
     LabComponent,
-    LoginComponent  ],
+    LoginComponent,
+    ProfileComponent  ],
   imports: [
     CommonModule,
     ComponentsModule,
