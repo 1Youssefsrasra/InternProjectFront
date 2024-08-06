@@ -8,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 import { ComponentsModule } from '../components/components.module';
 
 
-
 @NgModule({
   declarations: [
     DoctorComponent,
@@ -18,7 +17,9 @@ import { ComponentsModule } from '../components/components.module';
     LoginComponent  ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    
+    
     
   ]
 })
