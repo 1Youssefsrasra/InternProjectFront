@@ -13,7 +13,7 @@ import { LayoutsModule } from './layouts/layouts.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
   
   ],
   providers: [],
