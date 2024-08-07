@@ -1,0 +1,45 @@
+/* patient.component.css */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: left;
+  }
+  
+  .analysis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .status {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .patient-info {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .timeline {
+    margin: 20px 0;
+  }
+  
+  .timeline ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .timeline ul li {
+    margin: 5px 0;
+  }
+  
