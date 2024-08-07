@@ -23,6 +23,7 @@ import { ChatComponent } from './components/chat/chat.component';
     LayoutsModule,
     FormsModule,
     HttpClientModule 
+
   
   ],
   providers: [],
