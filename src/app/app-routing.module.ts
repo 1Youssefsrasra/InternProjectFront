@@ -7,7 +7,6 @@ import { PatientComponent } from './layouts/patient/patient.component';
 
 import {ResearcherComponent}from './layouts/researcher/researcher.component'
 
-
 const routes: Routes = [
   {path:'', component:HomepageComponent},
 

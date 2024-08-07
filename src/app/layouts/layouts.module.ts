@@ -5,6 +5,9 @@ import { ResearcherComponent } from './researcher/researcher.component';
 import { LabComponent } from './lab/lab.component';
 import { LoginComponent } from './login/login.component';
 import { ComponentsModule } from '../components/components.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ChatComponent } from '../components/chat/chat.component';
 
 
 @NgModule({
@@ -13,13 +16,16 @@ import { ComponentsModule } from '../components/components.module';
     PatientComponent,
     ResearcherComponent,
     LabComponent,
-    LoginComponent  ],
+    LoginComponent,
+    ChatComponent ],
   imports: [
     CommonModule,
     ComponentsModule,
-    
-    
-    
+    FormsModule,
+    HttpClientModule
+  ],
+  exports: [
+    FormsModule
   ]
 })
 export class LayoutsModule { }
