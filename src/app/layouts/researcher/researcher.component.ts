@@ -1,6 +1,8 @@
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
-
+import { catchError, Observable, throwError } from 'rxjs';
+import { Prediction } from './prediction';
 
 // Register the necessary Chart.js components
 Chart.register(...registerables);
@@ -11,13 +13,20 @@ Chart.register(...registerables);
   styleUrls: ['./researcher.component.css']
 })
 export class ResearcherComponent implements OnInit {
-  constructor() { }
+  constructor(private http: HttpClient) { }
   showComponent: boolean = true;
-
-  
+  predictions: Prediction[]=[];
+  apiUrl="http://localhost:3000/predictions"
   ngOnInit(): void {
-   
-    this.createPieChart();
+    this.getPredictions().subscribe(
+      data => {
+        this.predictions = data;
+        // this.createPieChart();
+      },
+      error => {
+        console.error('Error fetching predictions:', error);
+      }
+    );
   }
  
 
@@ -73,7 +82,15 @@ export class ResearcherComponent implements OnInit {
     link.click();
     document.body.removeChild(link);
   }
-  
+  getPredictions(): Observable<Prediction[]> {
+    return this.http.get<Prediction[]>("http://localhost:3000/predictions").pipe(
+      catchError(this.handleError)
+    );
+  }
+  private handleError(error: HttpErrorResponse) {
+    console.error('An error occurred:', error.message);
+    return throwError('Something went wrong; please try again later.');
+  }
 
   
 }
