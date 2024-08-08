@@ -32,6 +32,7 @@ export class ChatComponent {
   }
 
   sendMessage() {
+    console.log("sent a message ?!")
     if (this.userMessage.trim()) {
       this.conversation.push({ text: this.userMessage, type: 'visitor' });
       this.mes=this.userMessage ;

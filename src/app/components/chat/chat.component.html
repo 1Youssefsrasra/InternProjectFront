@@ -19,8 +19,8 @@
         </div>
       </div>
       <div class="chatbox__footer">
-        <input type="text" [(ngModel)]="userMessage" placeholder="Écrivez un message" (keydown.enter)="sendMessage()">
-        <button (click)="sendMessage()">Send</button>
+        <input id="input_chat" type="text" [(ngModel)]="userMessage" placeholder="Écrivez un message" (keydown.enter)="sendMessage()">
+        <button id="button_chat" (click)="sendMessage()">Send</button>
       </div>
     </div>
   </div>

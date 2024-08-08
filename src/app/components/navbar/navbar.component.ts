@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PredictionService } from 'src/app/services/prediction.service';
 
 
 @Component({
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 
 })
-export class NavbarComponent {
-
+export class NavbarComponent implements OnInit {
+constructor( private predict : PredictionService){}
+  ngOnInit(): void {
+    console.log(this.predict.getData())
+  }
 }

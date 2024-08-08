@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { PredictionService } from 'src/app/services/prediction.service';
 
 interface Feature {
   id: string;
@@ -21,7 +22,7 @@ export class PredictionComponent {
     { id: '', name: null, composition: null }
   ];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient , private predict : PredictionService) {}
 
   onSubmit(form: any) {
     const formData = {
@@ -38,6 +39,7 @@ export class PredictionComponent {
     this.http.post<any>('http://127.0.0.1:3000', formData).subscribe(
       response => {
         this.prediction = response.prediction;
+        this.predict.setData(response.prediction);
       },
       error => {
         console.error('Error:', error);
