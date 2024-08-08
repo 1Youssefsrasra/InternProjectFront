@@ -7,7 +7,7 @@ import { Patient } from './patient'
   styleUrls: ['./patient.component.css']
 })
 export class PatientComponent {
-
+  pat: string = '/patient';
   title = 'MicroScan';
   patient = {
     name: 'John Smith',

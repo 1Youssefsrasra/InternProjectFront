@@ -13,7 +13,7 @@ Chart.register(...registerables);
 export class ResearcherComponent implements OnInit {
   constructor() { }
   showComponent: boolean = true;
-
+  pat : any = '/researcher';
   
   ngOnInit(): void {
    
