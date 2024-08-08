@@ -6,6 +6,9 @@ import { LabComponent } from './layouts/lab/lab.component';
 import { PatientComponent } from './layouts/patient/patient.component';
 
 import {ResearcherComponent}from './layouts/researcher/researcher.component'
+import { LoginComponent } from './layouts/login/login.component';
+import { PredictionComponent } from './layouts/prediction/prediction.component';
+import { ProfileComponent } from './layouts/profile/profile.component';
 
 
 const routes: Routes = [
@@ -15,7 +18,10 @@ const routes: Routes = [
 
 
   {path:'researcher', component:ResearcherComponent},
-  {path: 'lab', component:LabComponent}
+  {path: 'lab', component:LabComponent},
+  {path:'login',component:LoginComponent},
+  {path:'prediction',component:PredictionComponent},
+  {path:'profil',component:ProfileComponent}
 
 
 ];

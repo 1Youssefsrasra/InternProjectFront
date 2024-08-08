@@ -1,0 +1,179 @@
+/* General Container Styling */
+.container {
+  font-family: Arial, sans-serif;
+  margin: 30px auto;
+  margin-left: 340px;
+  padding: 60px;
+  padding-top: 20px;
+  max-width: 1100px;
+  background-color: #707FDD;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+h1 {
+  color: #707FDD;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Label Styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Input Field Styling */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #707FDD;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* Prediction Result Styling */
+.prediction {
+  margin-top: 20px;
+  background: #707FDD;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Microbiome Inputs Styling */
+.microbiome-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Microbiome Input Row Styling */
+.microbiome-inputs > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: 2px solid #007BFF;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Microbiome Input ID Styling */
+.microbiome-inputs .input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.microbiome-inputs .input-group label {
+  width: 200px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.microbiome-inputs .input-group input[type="text"] {
+  flex: 1;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+
+/* Microbiome Composition Styling */
+.microbiome-composition {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.microbiome-composition label {
+  width: 200px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.microbiome-composition input[type="text"] {
+  flex: 1;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+
+/* Microbiome Name Display Styling */
+.microbiome-inputs p {
+  margin: 0;
+  color: #555;
+  margin-left: 10px;
+}
+/* Prediction Result Styling */
+.prediction {
+  margin-top: 20px;
+  background: #f8f9fa; /* Light background for better readability */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Result Card Styling */
+.result-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Result Header Styling */
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.result-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.result-status {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007BFF; /* Blue color for emphasis */
+}
+
+/* Result Details Styling */
+.result-details {
+  margin: 5px 0;
+  color: #555;
+}
+
+.result-details strong {
+  color: #333;
+}

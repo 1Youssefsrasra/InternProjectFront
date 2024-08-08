@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+
+<div class="container">
+  <h1>Please insert the information of the patient</h1>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" ngModel required>
+
+    <label for="fibro_vessel">Fibroblast and Vessel Percent:</label>
+    <input type="text" id="fibro_vessel" name="fibro_vessel" ngModel required>
+
+    <label for="sex">Sex (male or female):</label>
+    <input type="text" id="sex" name="sex" ngModel required>
+
+    <div class="microbiome-inputs">
+      <div *ngFor="let feature of features; let i = index">
+        <div class="input-group">
+          <label [for]="'microbiomeId' + i">ID: Microbiome {{ i + 1 }} </label>
+          <input type="text" [id]="'microbiomeId' + i" [(ngModel)]="features[i].id" (blur)="fetchMicrobiomeName(i)" name="microbiomeId{{i}}" required>
+          <p *ngIf="features[i].name">Microbiome Name: {{ features[i].name }}</p>
+        </div>
+        <div class="microbiome-composition">
+          <label for="microbiomeComposition">Microbiome Composition</label>
+          <input type="text" [id]="'microbiomeComposition' + i" [(ngModel)]="features[i].composition" name="microbiomeComposition{{i}}" required>
+        </div>
+      </div>
+    </div>
+
+    <label for="treatment">Treatment:</label>
+    <input type="text" id="treatment" name="treatment" ngModel required>
+
+    <button type="submit">Predict</button>
+  </form>
+
+  <div *ngIf="prediction" class="prediction">
+    <h2>Prediction Result:</h2>
+    <p>{{ prediction }}</p>
+  </div>
+
+
+
+</div>
