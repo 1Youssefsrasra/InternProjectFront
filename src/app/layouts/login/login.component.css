@@ -1,0 +1,55 @@
+.actors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px; /* Added padding to center the content vertically */
+  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.actor {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 250px; /* Increased width */
+  height: 300px; /* Increased height */
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.actor:hover {
+  transform: scale(1.05);
+}
+
+.actor img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.actor h2 {
+  font-size: 1.4em; /* Slightly increased font size */
+  margin: 10px 0;
+  color: #445bb3;
+}
+
+.actor ul {
+  list-style: none;
+  padding: 0;
+  color: #555;
+}
+
+.actor ul li {
+  margin: 5px 0;
+  font-size: 0.9em;
+}

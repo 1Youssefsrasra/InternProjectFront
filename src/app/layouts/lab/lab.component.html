@@ -1,3 +1,174 @@
+<app-navbar></app-navbar>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroScan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .circular-progress {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: auto;
+        }
+
+        .circular-progress svg {
+            transform: rotate(-90deg);
+        }
+
+        .circular-progress circle {
+            fill: none;
+            stroke-width: 10;
+            stroke-linecap: round;
+        }
+
+        .circular-progress .bg {
+            stroke: #e5e7eb;
+        }
+
+        .circular-progress .progress {
+            stroke: #707FDD;
+            stroke-dasharray: 440;
+            stroke-dashoffset: calc(440 - (440 * var(--percentage)) / 100);
+            transition: stroke-dashoffset 0.5s ease;
+        }
+
+        .circular-progress .percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="bg-white h-screen">
+
+    <div class="h-full flex">
+        <!-- Sidebar Component -->
+        <app-sidebar class="w-1/4 bg-white p-4"></app-sidebar>
+
+        <div class="flex-1 p-4">
+            <header class="text-center p-4 bg-white">
+                <h1 class="text-3xl">Welcome to MicroScan</h1>
+            </header>
+
+            <section class="bg-white p-8 flex flex-col h-full">
+                <div class="flex items-center justify-between mt-8 flex-1">
+                    <div class="flex-1 text-left">
+                        <h2 class="text-xl font-bold mb-4">Analysis Status</h2>
+                        <h3 class="text-gray-400 mb-4">From 1-20 July, 2024</h3>
+                        <div class="circular-progress" style="--percentage: 75;">
+                            <svg width="150" height="150">
+                                <circle class="bg" cx="75" cy="75" r="70"></circle>
+                                <circle class="progress" cx="75" cy="75" r="70"></circle>
+                            </svg>
+                            <div class="percentage">75%</div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex items-center justify-center">
+                                <span class="inline-block w-3 h-3 bg-[#707FDD] rounded-full mr-2"></span>
+                                <span>Finished</span>
+                            </div>
+                            <div class="flex items-center justify-center mt-2">
+                                <span class="inline-block w-3 h-3 bg-gray-200 rounded-full mr-2"></span>
+                                <span>Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-l border-gray-200 h-48 mx-8"></div>
+                    <div class="flex-1">
+                        <h2 class="text-xl font-bold mb-4">29 July</h2>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span
+                                    class="bg-[#707FDD] text-white rounded-full h-6 w-6 flex items-center justify-center mr-4">✔</span>
+                                Analysis results received: Yesterday
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="bg-[#707FDD] text-white rounded-full h-6 w-6 flex items-center justify-center mr-4">✔</span>
+                                Analysis launched: 22 July
+                            </li>
+                            <li class="flex items-center">
+                                <span
+                                    class="bg-[#707FDD] text-white rounded-full h-6 w-6 flex items-center justify-center mr-4">✔</span>
+                                Laboratory meeting: 20 July
+                            </li>
+                        </ul>
+                        <div class="text-right mt-4">
+                            <a href="#" class="text-[#707FDD]">View all</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-8">
+
+                <!-- Patient Cards Section -->
+                <div class="mt-8">
+                    <h2 class="text-2xl font-bold mb-4">Patients</h2>
+                    <div class="space-y-6">
+                        <!-- Card 1 -->
+                        <div class="bg-white shadow-md rounded-lg p-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img class="w-16 h-16 rounded-full mr-4" src="../../../assets/Images/Patients/John.png"
+                                    alt="Patient Photo">
+                                <div>
+                                    <h3 class="text-lg font-semibold">John Doe</h3>
+                                    <p class="text-gray-600">Patient</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <button class="bg-[#6398AC] text-white px-4 py-2 rounded-full mr-4" routerLink="/prediction">Go to prediction</button>
+                                <button class="bg-[#707FDD] text-white px-4 py-2 rounded-full" routerLink="/profil">See profile</button>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-white shadow-md rounded-lg p-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img class="w-16 h-16 rounded-full mr-4" src="../../../assets/Images/Patients/Jane.png"
+                                    alt="Patient Photo">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Jane Smith</h3>
+                                    <p class="text-gray-600">Patient</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <button class="bg-[#6398AC] text-white px-4 py-2 rounded-full mr-4" routerLink="/prediction">Go to prediction</button>
+                                <button class="bg-[#707FDD] text-white px-4 py-2 rounded-full" routerLink="/profil">See profile</button>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-white shadow-md rounded-lg p-4 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img class="w-16 h-16 rounded-full mr-4" src="../../../assets/Images/Patients/Alice.png"
+                                    alt="Patient Photo">
+                                <div>
+                                    <h3 class="text-lg font-semibold">Alice Johnson</h3>
+                                    <p class="text-gray-600">Patient</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <button class="bg-[#6398AC] text-white px-4 py-2 rounded-full mr-4" routerLink="/prediction">Go to prediction</button>
+                                <button class="bg-[#707FDD] text-white px-4 py-2 rounded-full" routerLink="/profil">See profile</button>
+                            </div>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
+                </div>
+                <br>
+            </section>
+        </div>
+    </div>
+
+</body>
+
+</html>
 <!DOCTYPE html>
 <html lang="en">
 
